@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-
   final String title;
 
   @override
@@ -44,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        elevation: 4,
       ),
       body: Center(
         child: Column(
@@ -52,22 +52,28 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-              Container(
-                color: Colors.amber,
-                child: const Text("Hello"),),
-
-              Container(
-                color: Colors.orange,
-                child: const Text("There"),),
-
-              Container(
-                color: Colors.orange,
-                child: Row(children: [  Container(
-                color: Colors.blue,
-                child: const Text("Mate"),)],),)
-
-            ],)
-          ,  const Text(
+                Container(
+                  color: Colors.amber,
+                  child: const Text("Hello"),
+                ),
+                Container(
+                  color: Colors.orange,
+                  child: const Text("There"),
+                ),
+                Container(
+                  color: Colors.orange,
+                  child: Row(
+                    children: [
+                      Container(
+                        color: Colors.blue,
+                        child: const Text("Mate"),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+            const Text(
               'You have pushed the button this many times:',
             ),
             Text(
@@ -81,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), 
+      ),
     );
   }
 }

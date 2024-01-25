@@ -1,3 +1,3 @@
 # resize_sample
 
-size example
+Shows some size examples using dart.
